@@ -27,7 +27,7 @@ def ssh_multiple_connections(hosts_info, command):
 ssh_info_str = os.getenv('SSH_INFO', '[]')
 hosts_info = json.loads(ssh_info_str)
 
-command = 'whoami'
+command = 'ls -la'
 user_list, hostname_list = ssh_multiple_connections(hosts_info, command)
 user_num = len(user_list)
 content = "SSH服务器登录信息：\n"
